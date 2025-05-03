@@ -1,0 +1,45 @@
+{
+    "name": "Fegn",
+    "version": "3.3.1",
+    "description": "Wholf dilinde entegrasyon ve veri yönetimi için kullanılan modern ve güçlü kütüphane",
+    "main": "src/Fegn.hpp",
+    "dependencies": {
+        "wholf-core": ">= 3.0.0",
+        "wholf-utils": ">= 3.0.0",
+        "wholf-network": ">= 3.0.0",
+        "wholf-cache": ">= 3.0.0",
+        "wholf-stream": ">= 3.0.0",
+        "wholf-event": ">= 3.0.0",
+        "wholf-async": ">= 3.0.0"
+    },
+    "devDependencies": {
+        "wholf-test": ">= 3.0.0",
+        "wholf-debug": ">= 3.0.0",
+        "wholf-lint": ">= 3.0.0"
+    },
+    "scripts": {
+        "test": "wholf test",
+        "build": "wholf build",
+        "lint": "wholf lint",
+        "coverage": "wholf coverage"
+    },
+    "keywords": [
+        "wholf",
+        "fegn",
+        "entegrasyon",
+        "veri",
+        "olay",
+        "websocket",
+        "cache",
+        "validator",
+        "async",
+        "stream",
+        "event-sourcing"
+    ],
+    "author": "Wholf Development Team",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/wholf-lang/Fegn.git"
+    }
+}

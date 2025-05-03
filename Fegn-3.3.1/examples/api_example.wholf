@@ -1,0 +1,34 @@
+// Modern API entegrasyonu örneği
+
+// API entegrasyonu
+fegn Api {
+    // GET isteği
+    get: ("/users") => {
+        Console.log("Kullanıcılar alındı")
+    },
+    
+    // POST isteği
+    post: ("/users", {
+        name: "Ahmet",
+        email: "ahmet@example.com"
+    }) => {
+        Console.log("Kullanıcı eklendi")
+    },
+    
+    // Stream desteği
+    stream: ("/events") => {
+        Console.log("Yeni olay alındı")
+    }
+}
+
+// Kullanıcıları al
+Api.get("/users")
+
+// Yeni kullanıcı ekle
+Api.post("/users", {
+    name: "Ahmet",
+    email: "ahmet@example.com"
+})
+
+// Olay akışı
+Api.stream("/events")

@@ -1,0 +1,35 @@
+// Modern API entegrasyonu testleri
+test "Modern API entegrasyonu testi" {
+    // API entegrasyonu
+    fegn Api {
+        // GET isteği testi
+        get: ("/users") => {
+            assert true
+        },
+        
+        // POST isteği testi
+        post: ("/users", {
+            name: "Ahmet",
+            email: "ahmet@example.com"
+        }) => {
+            assert true
+        },
+        
+        // Stream testi
+        stream: ("/events") => {
+            assert true
+        }
+    }
+    
+    // Kullanıcıları al
+    Api.get("/users")
+    
+    // Yeni kullanıcı ekle
+    Api.post("/users", {
+        name: "Ahmet",
+        email: "ahmet@example.com"
+    })
+    
+    // Olay akışı
+    Api.stream("/events")
+}

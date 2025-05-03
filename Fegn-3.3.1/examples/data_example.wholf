@@ -1,0 +1,52 @@
+// Gelişmiş veri yönetimi örneği
+
+// Veri yönetimi
+fegn Data {
+    // Veri ekle
+    add: ("users", {
+        name: "Ahmet",
+        email: "ahmet@example.com"
+    }) => {
+        Console.log("Kullanıcı eklendi")
+    },
+    
+    // Veri al
+    get: ("users", {
+        email: "ahmet@example.com"
+    }) => {
+        Console.log("Kullanıcı bulundu")
+    },
+    
+    // Veri sil
+    remove: ("users", {
+        email: "ahmet@example.com"
+    }) => {
+        Console.log("Kullanıcı silindi")
+    },
+    
+    // Veri akışı
+    pipe: (data) => {
+        Console.log("Veri akışı")
+    }
+}
+
+// Kullanıcı ekle
+Data.add("users", {
+    name: "Ahmet",
+    email: "ahmet@example.com"
+})
+
+// Kullanıcı al
+Data.get("users", {
+    email: "ahmet@example.com"
+})
+
+// Kullanıcı sil
+Data.remove("users", {
+    email: "ahmet@example.com"
+})
+
+// Veri akışı
+Data.pipe((data) => {
+    Console.log("İşlenen veri: " + data.name)
+})
